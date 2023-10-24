@@ -1,0 +1,14 @@
+# es importante respetar los espacios y sangrias
+# montar un base de datos mongoDb mediante docker
+version: '3'
+
+services:
+  db:
+    container_name: mongo-db
+    image: mongo:5.0.21
+    volumes:
+      - ./mongo:/data/db
+    ports:
+      - 27017:27017
+    restart: always
+# restart: always hace que siempre que abramos docker se active la base de datos
